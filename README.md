@@ -394,7 +394,7 @@ Solución: Usar otro puerto o cerrar la aplicación que lo usa
 - DHCP → Asignar IPs automáticamente
 - TCP → Confiable y lento
 - UDP → Rápido pero sin garantías
-# Conceptos Básicos de Conexión Web y Seguridad
+# 7. Conceptos Básicos de Conexión Web y Seguridad
 
 ## 🔄 Proceso básico de conexión en la web
 
@@ -445,7 +445,7 @@ Es como cuando llamas por teléfono:
 - La otra persona: "¡Hola! Te escucho bien"
 - Tú: "Perfecto, empecemos a hablar"
 
-## 🔐 Seguridad y capa de transporte
+# 8. 🔐 Seguridad y capa de transporte
 
 ### Introducción rápida a SSL/TLS
 
@@ -501,3 +501,34 @@ HTTPS: Tu contraseña viaja como "x7k9mQ2#vR8$nP1@zL4"
 3. **TCP Handshake**: Establece una conexión confiable en 3 pasos
 4. **SSL/TLS**: Protocolos que encriptan y protegen tus datos
 5. **HTTPS**: Versión segura de HTTP que mantiene tu información privada
+
+# 9. 📡 Herramientas básicas para ver el protocolo en acción
+
+Estas herramientas te permiten observar cómo los protocolos de red (como TCP/IP, DNS, HTTP, etc.) funcionan realmente en tu sistema:
+
+| Herramienta | ¿Para qué sirve? |
+|-------------|------------------|
+| **ping** | Verifica si una dirección IP o dominio está activa y responde. Ayuda a medir latencia. |
+| **tracert** / **traceroute** | Muestra la ruta (saltos) que siguen los paquetes desde tu equipo hasta un destino. |
+| **netstat** | Muestra conexiones de red activas, puertos usados y servicios escuchando. |
+| **nslookup** | Consulta DNS para saber la IP asociada a un dominio o viceversa. |
+| **curl** | Envía solicitudes HTTP/HTTPS para probar APIs o sitios web. |
+| **telnet** | Se conecta a puertos específicos en otros equipos, útil para probar si un servicio responde. |
+
+
+# 10. 🧠 Glosario esencial de términos
+
+| Término | Significado básico |
+|---------|-------------------|
+| **IP** | Dirección única que identifica un dispositivo en la red (ej: 192.168.1.1). |
+| **DNS** | Sistema que traduce nombres de dominio (como `google.com`) en direcciones IP. |
+| **Gateway** | Dispositivo que conecta tu red local con el exterior (generalmente tu router). |
+| **NAT** | Traducción de direcciones de red. Permite que varios dispositivos compartan una sola IP pública. |
+| **Subred** | División lógica de una red. Permite organizar dispositivos dentro de una red. |
+| **Paquete** | Unidad de datos que viaja por la red. Contiene información como destino, origen, etc. |
+| **Puerto** | Punto lógico de conexión para acceder a un servicio (ej: 80 para HTTP, 443 para HTTPS). |
+| **MAC** | Dirección física única de una tarjeta de red. Se usa a nivel de red local (LAN). |
+
+## 📌 Importante
+
+Todos estos conceptos están relacionados con el modelo OSI y el protocolo TCP/IP.
