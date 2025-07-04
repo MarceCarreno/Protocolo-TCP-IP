@@ -394,3 +394,110 @@ Solución: Usar otro puerto o cerrar la aplicación que lo usa
 - DHCP → Asignar IPs automáticamente
 - TCP → Confiable y lento
 - UDP → Rápido pero sin garantías
+# Conceptos Básicos de Conexión Web y Seguridad
+
+## 🔄 Proceso básico de conexión en la web
+
+### De tu navegador a un servidor web: ¿qué ocurre paso a paso?
+
+Cuando escribes una URL en tu navegador y presionas Enter, sucede una serie de pasos automáticos:
+
+1. **Escribes la URL**: Por ejemplo, `www.google.com`
+2. **Resolución DNS**: Tu navegador pregunta "¿dónde está este sitio web?"
+3. **Conexión TCP**: Se establece un "canal de comunicación" con el servidor
+4. **Solicitud HTTP**: Tu navegador pide la página web
+5. **Respuesta del servidor**: El servidor envía la página web de vuelta
+6. **Renderizado**: Tu navegador muestra la página en pantalla
+
+### Resolución DNS
+
+**¿Qué es?**
+DNS significa "Sistema de Nombres de Dominio". Es como la "guía telefónica" de internet.
+
+**¿Cómo funciona?**
+- Tu navegador no entiende nombres como `www.google.com`
+- Necesita una dirección IP (como `142.250.191.14`)
+- El DNS traduce el nombre del sitio web a su dirección IP real
+- Es como buscar el número de teléfono de una empresa en la guía telefónica
+
+**Ejemplo práctico:**
+```
+Tu navegador: "¿Dónde está www.google.com?"
+Servidor DNS: "Está en la dirección 142.250.191.14"
+Tu navegador: "¡Gracias! Ahora puedo conectarme"
+```
+
+### Establecimiento de conexión TCP (Handshake)
+
+**¿Qué es TCP?**
+TCP es un protocolo que garantiza que los datos lleguen completos y en orden correcto.
+
+**¿Qué es el Handshake?**
+Es un "saludo" de tres pasos entre tu navegador y el servidor:
+
+1. **Tu navegador dice**: "Hola, ¿quieres hablar conmigo?"
+2. **El servidor responde**: "¡Hola! Sí, quiero hablar contigo"
+3. **Tu navegador confirma**: "¡Perfecto! Empecemos a hablar"
+
+**Analogía:**
+Es como cuando llamas por teléfono:
+- Tú: "¿Aló?"
+- La otra persona: "¡Hola! Te escucho bien"
+- Tú: "Perfecto, empecemos a hablar"
+
+## 🔐 Seguridad y capa de transporte
+
+### Introducción rápida a SSL/TLS
+
+**¿Qué son SSL/TLS?**
+Son protocolos de seguridad que protegen la información que viaja entre tu navegador y el servidor web.
+
+**¿Para qué sirven?**
+- **Encriptación**: Convierten tu información en un código secreto
+- **Autenticación**: Verifican que el sitio web es realmente quien dice ser
+- **Integridad**: Garantizan que nadie modificó los datos durante el viaje
+
+**Analogía:**
+Es como enviar una carta importante:
+- **Sin SSL/TLS**: Envías una postal (todos pueden leer lo que escribiste)
+- **Con SSL/TLS**: Envías la carta en un sobre cerrado con candado (solo el destinatario puede abrirla)
+
+### Qué cambia cuando usamos HTTPS
+
+**HTTP vs HTTPS:**
+- **HTTP**: Comunicación normal, sin protección
+- **HTTPS**: HTTP + SSL/TLS = Comunicación protegida
+
+**¿Cómo identificar HTTPS?**
+- Aparece un candado 🔒 en la barra del navegador
+- La URL comienza con `https://` (no solo `http://`)
+- Algunos navegadores muestran "Conexión segura"
+
+**¿Qué cambia exactamente?**
+
+| Aspecto | HTTP | HTTPS |
+|---------|------|-------|
+| **Seguridad** | Sin protección | Datos encriptados |
+| **Privacidad** | Cualquiera puede ver tus datos | Solo tú y el servidor pueden ver los datos |
+| **Confianza** | No hay verificación del sitio | Se verifica la identidad del sitio |
+| **Velocidad** | Ligeramente más rápido | Casi imperceptible la diferencia |
+
+**¿Por qué es importante?**
+- Protege tus contraseñas y datos personales
+- Evita que hackers intercepten tu información
+- Los buscadores como Google prefieren sitios con HTTPS
+- Es especialmente crítico para bancos, tiendas online y redes sociales
+
+**Ejemplo práctico:**
+```
+HTTP: Tu contraseña viaja como "micontraseña123"
+HTTPS: Tu contraseña viaja como "x7k9mQ2#vR8$nP1@zL4"
+```
+
+## 🎯 Resumen rápido
+
+1. **Conexión web**: Tu navegador busca la dirección IP del sitio, se conecta y pide la página
+2. **DNS**: Traduce nombres de sitios web a direcciones IP
+3. **TCP Handshake**: Establece una conexión confiable en 3 pasos
+4. **SSL/TLS**: Protocolos que encriptan y protegen tus datos
+5. **HTTPS**: Versión segura de HTTP que mantiene tu información privada
