@@ -37,3 +37,68 @@ El modelo OSI (Open Systems Interconnection) es un modelo teórico de 7 capas qu
 TCP/IP se adoptó porque es más simple y práctico que el modelo OSI. Mientras OSI era muy detallado teóricamente, TCP/IP ya estaba funcionando en redes reales. Además, TCP/IP es más flexible y se adapta mejor a las necesidades cambiantes de Internet.
 
 ---
+# 🌐 Modelo TCP/IP y Direccionamiento IP
+
+## 3. 🧱 Las 4 capas del modelo TCP/IP (explicado fácil)
+
+El modelo TCP/IP describe cómo viajan los datos por internet, dividido en 4 capas. Cada una cumple un rol clave en la comunicación de red.
+
+### 1. Capa de Aplicación
+- Interactúa directamente con el usuario o las aplicaciones.
+- Protocolos comunes:
+  - **HTTP/HTTPS** → navegación web
+  - **DNS** → convierte nombres en direcciones IP
+- 📌 *Ejemplo:* cuando visitas un sitio web.
+
+### 2. Capa de Transporte
+- Divide los datos en partes (paquetes) y se asegura de que lleguen bien.
+- Protocolos:
+  - **TCP** (confiable, lento)
+  - **UDP** (rápido, sin garantía)
+- 📌 *Ejemplo:* ver un video en streaming usa UDP.
+
+### 3. Capa de Internet
+- Encargada de enrutar los paquetes a su destino.
+- Usa direcciones IP y protocolos como:
+  - **IP (Internet Protocol)**
+  - **Routing** → caminos por donde viajan los datos.
+
+### 4. Capa de Acceso a Red
+- Conecta físicamente los dispositivos a la red.
+- Tecnologías comunes:
+  - **Ethernet**
+  - **Wi-Fi**
+- 📌 *Ejemplo:* conexión del notebook al router por Wi-Fi.
+
+---
+
+## 4. 🌐 Direccionamiento IP: IPv4 vs IPv6
+
+### ¿Qué es una dirección IP?
+Una IP es como el número de casa de un dispositivo: permite identificarlo y que se comunique con otros en la red.
+
+### Estructura básica de una IP
+
+- **IPv4:** 4 bloques numéricos (0–255), separados por puntos.  
+  Ej: `192.168.1.1`
+
+- **IPv6:** más largo, con números y letras, separados por dos puntos.  
+  Ej: `2001:0db8:85a3:0000:0000:8a2e:0370:7334`
+
+### Comparación: IPv4 vs IPv6
+
+| Característica         | IPv4             | IPv6                          |
+|------------------------|------------------|-------------------------------|
+| Longitud               | 32 bits          | 128 bits                      |
+| Formato                | `192.168.0.1`    | `2001:0db8::7334`             |
+| Capacidad              | ~4 mil millones  | Casi infinita 🌍				|
+| Estado actual          | Saturado         | Alternativa moderna           |
+
+### IP pública vs privada
+
+- **IP pública:** visible desde internet. Identifica tu red en el exterior.
+- **IP privada:** solo visible dentro de tu red local (como en casa).
+
+📌 *Ejemplo de IP privada:* `192.168.0.100` (Wi-Fi del hogar)
+
+---
